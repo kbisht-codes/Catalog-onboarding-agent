@@ -1,0 +1,272 @@
+[
+  {
+    "item_id": "SKU1000",
+    "name": "Banana (1 dozen)",
+    "category": "Fruits & Vegetables",
+    "price_inr": 45
+  },
+  {
+    "item_id": "SKU1001",
+    "name": "Tomato",
+    "category": "Fruits & Vegetables",
+    "price_inr": 30
+  },
+  {
+    "item_id": "SKU1002",
+    "name": "Onion",
+    "category": "Fruits & Vegetables",
+    "price_inr": 35
+  },
+  {
+    "item_id": "SKU1003",
+    "name": "Potato",
+    "category": "Fruits & Vegetables",
+    "price_inr": 28
+  },
+  {
+    "item_id": "SKU1004",
+    "name": "Apple - Shimla",
+    "category": "Fruits & Vegetables",
+    "price_inr": 180
+  },
+  {
+    "item_id": "SKU1005",
+    "name": "Spinach Bunch",
+    "category": "Fruits & Vegetables",
+    "price_inr": 22
+  },
+  {
+    "item_id": "SKU1006",
+    "name": "Cucumber",
+    "category": "Fruits & Vegetables",
+    "price_inr": 25
+  },
+  {
+    "item_id": "SKU1007",
+    "name": "Carrot",
+    "category": "Fruits & Vegetables",
+    "price_inr": 40
+  },
+  {
+    "item_id": "SKU1008",
+    "name": "Amul Toned Milk 500ml",
+    "category": "Dairy & Eggs",
+    "price_inr": 27
+  },
+  {
+    "item_id": "SKU1009",
+    "name": "Farm Fresh Eggs (6 pack)",
+    "category": "Dairy & Eggs",
+    "price_inr": 42
+  },
+  {
+    "item_id": "SKU1010",
+    "name": "Amul Butter 100g",
+    "category": "Dairy & Eggs",
+    "price_inr": 56
+  },
+  {
+    "item_id": "SKU1011",
+    "name": "Paneer 200g",
+    "category": "Dairy & Eggs",
+    "price_inr": 85
+  },
+  {
+    "item_id": "SKU1012",
+    "name": "Curd 400g",
+    "category": "Dairy & Eggs",
+    "price_inr": 35
+  },
+  {
+    "item_id": "SKU1013",
+    "name": "Cheese Slices (10 pack)",
+    "category": "Dairy & Eggs",
+    "price_inr": 120
+  },
+  {
+    "item_id": "SKU1014",
+    "name": "Lay's Classic Salted 52g",
+    "category": "Snacks",
+    "price_inr": 20
+  },
+  {
+    "item_id": "SKU1015",
+    "name": "Kurkure Masala Munch 90g",
+    "category": "Snacks",
+    "price_inr": 20
+  },
+  {
+    "item_id": "SKU1016",
+    "name": "Britannia Good Day Cookies 200g",
+    "category": "Snacks",
+    "price_inr": 40
+  },
+  {
+    "item_id": "SKU1017",
+    "name": "Haldiram's Bhujia 200g",
+    "category": "Snacks",
+    "price_inr": 55
+  },
+  {
+    "item_id": "SKU1018",
+    "name": "Oreo Original 120g",
+    "category": "Snacks",
+    "price_inr": 30
+  },
+  {
+    "item_id": "SKU1019",
+    "name": "Bingo Mad Angles 72g",
+    "category": "Snacks",
+    "price_inr": 20
+  },
+  {
+    "item_id": "SKU1020",
+    "name": "Coca-Cola 750ml",
+    "category": "Beverages",
+    "price_inr": 40
+  },
+  {
+    "item_id": "SKU1021",
+    "name": "Real Fruit Juice Mixed 1L",
+    "category": "Beverages",
+    "price_inr": 110
+  },
+  {
+    "item_id": "SKU1022",
+    "name": "Bisleri Water 1L",
+    "category": "Beverages",
+    "price_inr": 20
+  },
+  {
+    "item_id": "SKU1023",
+    "name": "Red Bull 250ml",
+    "category": "Beverages",
+    "price_inr": 125
+  },
+  {
+    "item_id": "SKU1024",
+    "name": "Nescafe Classic Coffee 50g",
+    "category": "Beverages",
+    "price_inr": 165
+  },
+  {
+    "item_id": "SKU1025",
+    "name": "Tropicana Orange 1L",
+    "category": "Beverages",
+    "price_inr": 120
+  },
+  {
+    "item_id": "SKU1026",
+    "name": "Colgate Strong Teeth 150g",
+    "category": "Personal Care",
+    "price_inr": 55
+  },
+  {
+    "item_id": "SKU1027",
+    "name": "Dove Soap 100g",
+    "category": "Personal Care",
+    "price_inr": 48
+  },
+  {
+    "item_id": "SKU1028",
+    "name": "Head & Shoulders Shampoo 180ml",
+    "category": "Personal Care",
+    "price_inr": 165
+  },
+  {
+    "item_id": "SKU1029",
+    "name": "Nivea Body Lotion 200ml",
+    "category": "Personal Care",
+    "price_inr": 210
+  },
+  {
+    "item_id": "SKU1030",
+    "name": "Gillette Mach3 Razor",
+    "category": "Personal Care",
+    "price_inr": 199
+  },
+  {
+    "item_id": "SKU1031",
+    "name": "Sensodyne Toothpaste 100g",
+    "category": "Personal Care",
+    "price_inr": 110
+  },
+  {
+    "item_id": "SKU1032",
+    "name": "Vim Dishwash Bar",
+    "category": "Household Cleaning",
+    "price_inr": 20
+  },
+  {
+    "item_id": "SKU1033",
+    "name": "Surf Excel 1kg",
+    "category": "Household Cleaning",
+    "price_inr": 130
+  },
+  {
+    "item_id": "SKU1034",
+    "name": "Harpic Toilet Cleaner 500ml",
+    "category": "Household Cleaning",
+    "price_inr": 95
+  },
+  {
+    "item_id": "SKU1035",
+    "name": "Colin Glass Cleaner 500ml",
+    "category": "Household Cleaning",
+    "price_inr": 89
+  },
+  {
+    "item_id": "SKU1036",
+    "name": "Lizol Floor Cleaner 975ml",
+    "category": "Household Cleaning",
+    "price_inr": 199
+  },
+  {
+    "item_id": "SKU1037",
+    "name": "Pampers Diapers Medium (36 pcs)",
+    "category": "Baby Care",
+    "price_inr": 599
+  },
+  {
+    "item_id": "SKU1038",
+    "name": "Johnson's Baby Powder 200g",
+    "category": "Baby Care",
+    "price_inr": 165
+  },
+  {
+    "item_id": "SKU1039",
+    "name": "Himalaya Baby Lotion 200ml",
+    "category": "Baby Care",
+    "price_inr": 175
+  },
+  {
+    "item_id": "SKU1040",
+    "name": "Cerelac Wheat 300g",
+    "category": "Baby Care",
+    "price_inr": 210
+  },
+  {
+    "item_id": "SKU1041",
+    "name": "McCain French Fries 420g",
+    "category": "Frozen Foods",
+    "price_inr": 149
+  },
+  {
+    "item_id": "SKU1042",
+    "name": "Amul Ice Cream Tub 750ml",
+    "category": "Frozen Foods",
+    "price_inr": 250
+  },
+  {
+    "item_id": "SKU1043",
+    "name": "Godrej Yummiez Chicken Nuggets 425g",
+    "category": "Frozen Foods",
+    "price_inr": 275
+  },
+  {
+    "item_id": "SKU1044",
+    "name": "Safal Frozen Peas 500g",
+    "category": "Frozen Foods",
+    "price_inr": 90
+  }
+]

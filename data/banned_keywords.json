@@ -1,0 +1,10 @@
+{
+    "banned_keywords": [
+      "cigarette", "tobacco", "vape", "e-cigarette",
+      "alcohol", "whiskey", "beer", "wine", "rum", "vodka",
+      "knife", "blade", "weapon", "firearm", "ammunition",
+      "prescription", "antibiotic", "insulin", "opioid",
+      "firecracker", "gunpowder", "paracetamol", "tablet"
+    ],
+    "reason": "Items requiring special licensing, age-verification, or regulatory approval that this automated pipeline cannot clear."
+  }

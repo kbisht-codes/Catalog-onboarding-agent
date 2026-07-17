@@ -1,0 +1,34 @@
+{
+    "Fruits & Vegetables": {
+      "price_band_inr": [5, 300],
+      "requires_weight_field": true
+    },
+    "Dairy & Eggs": {
+      "price_band_inr": [10, 600],
+      "requires_weight_field": true
+    },
+    "Snacks": {
+      "price_band_inr": [10, 500],
+      "requires_weight_field": true
+    },
+    "Beverages": {
+      "price_band_inr": [15, 800],
+      "requires_weight_field": false
+    },
+    "Personal Care": {
+      "price_band_inr": [20, 2000],
+      "requires_weight_field": false
+    },
+    "Household Cleaning": {
+      "price_band_inr": [25, 1500],
+      "requires_weight_field": false
+    },
+    "Baby Care": {
+      "price_band_inr": [30, 2500],
+      "requires_weight_field": false
+    },
+    "Frozen Foods": {
+      "price_band_inr": [40, 900],
+      "requires_weight_field": true
+    }
+  }

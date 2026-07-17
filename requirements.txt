@@ -1,0 +1,7 @@
+fastmcp
+sentence-transformers
+numpy
+langgraph
+langchain-groq
+langchain-mcp-adapters
+groq
