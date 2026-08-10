@@ -81,7 +81,7 @@ def flag_duplicate(item_name: str) -> dict:
         if score > best_score:
             best_score, best_match = score, item
 
-    is_duplicate = best_score >= 0.80  # tuned threshold, see note below
+    is_duplicate = best_score >= 0.80  # tuned threshold
     return {
         "is_duplicate": is_duplicate,
         "similarity": round(best_score, 3),
