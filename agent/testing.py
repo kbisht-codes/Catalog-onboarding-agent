@@ -3,7 +3,7 @@ Runs the agent against ALL 34 labeled cases and checks
 its decisions against the ground truth in testing.json.
 
 Setup: same as agent.py, no new packages needed.
-    python evaluate.py
+    python testing.py
 """
 
 import asyncio

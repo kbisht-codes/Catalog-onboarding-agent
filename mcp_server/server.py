@@ -47,6 +47,13 @@ def _normalize(name: str) -> str:
     return name
 
 
+_CATALOG_NORMALIZED = [(item, _normalize(item["name"])) for item in CATALOG]
+
+
+def _shared_token_overlap(a: str, b: str) -> int:
+    return len(set(a.split()) & set(b.split()))
+
+
 @mcp.tool()
 def search_existing_catalog(query: str) -> dict:
     """Search the existing product catalog by meaning, not just exact
@@ -73,15 +80,18 @@ def flag_duplicate(item_name: str) -> dict:
     variants, e.g. 'Amul Milk 500ml' vs 'amul milk 500 ml'). Returns
     is_duplicate=true with the matched item if similarity is high."""
     normalized_query = _normalize(item_name)
+    query_tokens = set(normalized_query.split())
     best_score, best_match = 0.0, None
-    for item in CATALOG:
-        score = difflib.SequenceMatcher(
-            None, normalized_query, _normalize(item["name"])
-        ).ratio()
+
+    for item, normalized_item in _CATALOG_NORMALIZED:
+        if not query_tokens or _shared_token_overlap(normalized_query, normalized_item) == 0:
+            continue
+
+        score = difflib.SequenceMatcher(None, normalized_query, normalized_item).ratio()
         if score > best_score:
             best_score, best_match = score, item
 
-    is_duplicate = best_score >= 0.80  # tuned threshold, see note below
+    is_duplicate = best_score >= 0.75
     return {
         "is_duplicate": is_duplicate,
         "similarity": round(best_score, 3),

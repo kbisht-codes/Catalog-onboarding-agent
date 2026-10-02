@@ -3,7 +3,7 @@
 An autonomous agent that reviews new e-commerce catalog item submissions and
 decides whether to auto-approve them or escalate to a human reviewer.
 Built to explore production agentic AI patterns: MCP tool servers, LangGraph
-orchestration, and LLM-as-a-judge evaluation.
+orchestration, and a rule-based evaluation harness for catalog approvals.
 
 ## Problem
 
@@ -20,7 +20,7 @@ New item submission
         v
 Onboarding Agent (LangGraph)  <----->  MCP Tool Server
         |                                 - search_existing_catalog (semantic)
-        v                                 - flag_duplicate (semantic + normalization)
+        v                                 - flag_duplicate (normalization + string match)
 auto_approve / escalate                 - check_category_rules
                                            - check_banned_keywords
 ```
@@ -31,35 +31,30 @@ auto_approve / escalate                 - check_category_rules
 - **Onboarding Agent** (`agent/agent.py`): a LangGraph agent that connects to
   the MCP server as a client, reasons over tool results, and applies
   explicit decision rules.
-- **Evaluation Harness** (`agent/evaluate.py`): runs the agent against a
-  34-case hand-labeled test set and scores tool-selection accuracy and
-  decision correctness.
+- **Evaluation Harness** (`agent/testing.py`): runs the agent against a
+  34-case hand-labeled test set and records final decision correctness
+  for each submission.
 
 ## Results
 
-| Accuracy | Change |
+| Accuracy | Notes |
 |---|---|
-|30/34 (88.2%) | +8.8pp |
+|31/34 (91.2%) | Latest measured run on the hand-labeled evaluation set |
 
 ### Key findings
 
-- Smaller open models (`llama-3.1-8b-instant` via Groq) are prone to
-  **retrieving correct tool results but failing to act on them** — e.g.
-  correctly detecting `is_duplicate: true` and still auto-approving anyway.
-  Fixed by converting implicit reasoning into explicit, mechanical decision
-  rules in the system prompt rather than trusting inference.
-- Character-level string similarity (`difflib`) fails on duplicate items
-  with inserted descriptive words (e.g. "Bisleri **Mineral** Water" vs
-  "Bisleri Water"). Switched `flag_duplicate` to semantic embeddings with
-  unit-format normalization as a pre-processing step.
-- Small models run with non-zero default temperature, producing real
-  run-to-run variance in tool-call ordering and reasoning — a known,
-  documented limitation rather than a hidden inconsistency.
-- Remaining failures at 88.2% cluster in genuinely hard cases: near-duplicate
-  items where similarity is borderline (not clearly above or below threshold),
-  and one over-cautious escalation on an ambiguous case — suggesting the next
-  improvement lever is threshold tuning against a larger labeled set, not
-  another prompt rewrite.
+- The current agent is performing strongly on the core validation checks:
+  clean approvals (8/8), banned items (4/4), price-band violations (4/4),
+  and missing required weight/quantity fields (3/3) all pass.
+- Remaining errors are concentrated in the harder reasoning categories:
+  duplicate detection (5/6 correct) and wrong-category classification (4/6 correct).
+- The main failure mode is not basic validation; it is semantic ambiguity.
+  Borderline duplicates and category misclassification are still where the
+  model is most likely to over-trust a weak signal or skip the intended
+  retrieval path.
+- The current project is a strong prototype: it is accurate enough to be
+  useful for a real workflow, but still needs stricter orchestration and
+  more robust duplicate/category logic before it is production-ready.
 
 ## Setup
 
@@ -95,5 +90,7 @@ catalog_project/
 - Ground truth labels in `testing.json` were written based on
   reasonable domain judgment, not real production data — this project
   demonstrates evaluation *methodology*, not validated real-world accuracy.
-- Uses a free-tier hosted model (Groq `llama-3.1-8b-instant`); tool-calling
-  reliability would likely improve with a larger model.
+- The current implementation uses Groq `openai/gpt-oss-120b` in the agent,
+  and duplicate detection is based on a semantic shortlist plus normalized
+  string similarity, not a full semantic dedupe model. Tool-calling
+  reliability would likely improve with a larger or more stable model.
